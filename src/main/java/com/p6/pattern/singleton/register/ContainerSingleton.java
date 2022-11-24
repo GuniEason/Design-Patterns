@@ -11,19 +11,21 @@ public class ContainerSingleton {
     private ContainerSingleton() {
     }
 
-    private static Map<String,Object> ioc = new ConcurrentHashMap<>(16);
+    private static final Map<String,Object> ioc = new ConcurrentHashMap<>(16);
 
     public static Object getInstance(String className){
         if (ioc.containsKey(className)) {
             return ioc.get(className);
         }
-        try {
-            Object instance = Class.forName(className).newInstance();
-            ioc.put(className,instance);
-            return instance;
-        } catch (Exception e) {
-            e.printStackTrace();
+        synchronized (ContainerSingleton.class){
+            try {
+                Object instance = Class.forName(className).newInstance();
+                ioc.put(className,instance);
+                return instance;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
         }
-        return null;
     }
 }

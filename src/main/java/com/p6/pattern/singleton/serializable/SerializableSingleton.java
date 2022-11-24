@@ -14,6 +14,7 @@ public class SerializableSingleton implements Serializable {
         return instance;
     }
 
+    //防止序列化" readResole"
     private Object readResolve(){ return instance;}
 
 }

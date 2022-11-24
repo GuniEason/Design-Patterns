@@ -3,7 +3,8 @@ package com.p6.pattern.singleton.threadLocal;
 /**
  * ThreadLocal单例模式
  *
- *
+ *   原理：以线程为key来保存实例
+ * 数据源切换单例
  */
 public class ThreadLocalSingleton {
 

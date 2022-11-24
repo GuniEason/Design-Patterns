@@ -4,7 +4,6 @@ import com.p6.pattern.builder.SimpleBuilder;
 import com.p6.pattern.builder.chain.ChainBuilder;
 import com.p6.pattern.service.entity.Eason;
 
-import java.net.SocketImpl;
 
 public class BuilderTest {
 
