@@ -1,9 +1,8 @@
 package com.p6.test.prototype;
 
-import com.p6.pattern.prototype.ConcreatePrototype;
+import com.p6.pattern.prototype.ConCreatePrototype;
 import com.p6.pattern.prototype.Prototype;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -18,13 +17,13 @@ public class PrototypeTest {
 
     public static void main(String[] args) {
 
-        ConcreatePrototype concreatePrototype = new ConcreatePrototype();
+        ConCreatePrototype concreatePrototype = new ConCreatePrototype();
         concreatePrototype.setAge(18);
         concreatePrototype.setName("Eason");
         concreatePrototype.setHobbies(Arrays.asList("张三","李四"));
 
         Client client = new Client();
-        ConcreatePrototype copy = (ConcreatePrototype) client.startClone(concreatePrototype);
+        ConCreatePrototype copy = (ConCreatePrototype) client.startClone(concreatePrototype);
 
 //        ConCreatePrototype copy = (ConcreatePrototype) concreatePrototype.clone();
 

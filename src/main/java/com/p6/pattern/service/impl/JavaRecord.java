@@ -6,7 +6,7 @@ public class JavaRecord implements ICourse {
 
     @Override
     public void record() {
-        System.out.println("JAVA录播");
+        System.out.println("JAVA学习");
 
     }
 }

@@ -93,3 +93,8 @@
 3. 了解CGLib和JDK Proxy的根本区别
 4. 手写实现定义的动态代理
 
+### 模式
+- [静态代理(显式声明被代理对象)](./src/main/java/com/p6/pattern/proxy/statics/TeachProxy.java)
+- 动态代理(动态配置和替换被代理对象)
+  - [JDK代理](./src/main/java/com/p6/pattern/proxy/jdk/TeacherJdkProxy.java)
+  - [CG Lib代理](./src/main/java/com/p6/pattern/proxy/cglib/CglibProxy.java)

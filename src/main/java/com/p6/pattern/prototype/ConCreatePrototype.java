@@ -10,7 +10,7 @@ import java.util.List;
  * @Date:2022/11/25 09:12
  * @Description: //
  */
-public class ConcreatePrototype implements Prototype{
+public class ConCreatePrototype implements Prototype{
 
     private  int age;
 
@@ -44,7 +44,7 @@ public class ConcreatePrototype implements Prototype{
 
     @Override
     public Prototype clone() {
-        ConcreatePrototype concreatePrototype = new ConcreatePrototype();
+        ConCreatePrototype concreatePrototype = new ConCreatePrototype();
         concreatePrototype.setAge(this.age);
         concreatePrototype.setName(this.name);
         concreatePrototype.setHobbies(this.hobbies);

@@ -6,7 +6,7 @@ public class PythonRecord implements ICourse {
 
     @Override
     public void record() {
-        System.out.println("Python录播");
+        System.out.println("Python学习");
 
     }
 }

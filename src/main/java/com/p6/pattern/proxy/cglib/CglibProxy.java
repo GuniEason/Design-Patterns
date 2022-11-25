@@ -24,10 +24,10 @@ public class CglibProxy implements MethodInterceptor {
     }
 
     private void after() {
-        System.out.println("老师布置作业");
+        System.out.println("执行结束");
     }
 
     private void before() {
-        System.out.println("老师上课结束");
+        System.out.println("准备开始");
     }
 }

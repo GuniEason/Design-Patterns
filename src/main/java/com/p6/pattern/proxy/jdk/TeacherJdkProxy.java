@@ -11,10 +11,10 @@ public class TeacherJdkProxy implements InvocationHandler {
     private Object object;
 
 
-    public ICourse getInstance(Object object){
+    public Object getInstance(Object object){
         this.object = object;
         Class<?> aClass = object.getClass();
-        return (ICourse) Proxy.newProxyInstance(aClass.getClassLoader(),aClass.getInterfaces(),this);
+        return Proxy.newProxyInstance(aClass.getClassLoader(),aClass.getInterfaces(),this);
     }
 
     @Override
@@ -26,10 +26,10 @@ public class TeacherJdkProxy implements InvocationHandler {
     }
 
     private void after() {
-        System.out.println("老师布置作业");
+        System.out.println("执行结束");
     }
 
     private void before() {
-        System.out.println("老师上课结束");
+        System.out.println("准备开始");
     }
 }
