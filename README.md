@@ -96,5 +96,33 @@
 ### 模式
 - [静态代理(显式声明被代理对象)](./src/main/java/com/p6/pattern/proxy/statics/TeachProxy.java)
 - 动态代理(动态配置和替换被代理对象)
-  - [JDK代理](./src/main/java/com/p6/pattern/proxy/jdk/TeacherJdkProxy.java)
-  - [CG Lib代理](./src/main/java/com/p6/pattern/proxy/cglib/CglibProxy.java)
+  - [JDK代理(采用实现的方式，必须要求代理的目标对象实现一个接口)](./src/main/java/com/p6/pattern/proxy/jdk/TeacherJdkProxy.java)
+  - [CG Lib代理(采用继承、覆盖父类的方法)](./src/main/java/com/p6/pattern/proxy/cglib/CglibProxy.java)
+  > 思想：都是通过生成字节码，重组成一个新的类
+  ```markdown
+   - JDK Proxy 对于用户而言，依赖更强，调用也更复杂
+   - CGLib 对于目标类没有任何的要求
+   - CGLib 效率更高，性能也更高，底层没有用到反射
+   - JDK Proxy 生成逻辑较为简单，执行效率要低，每次都要用反射
+   - CGLib 有个坑，目标代理不能有Final修饰的方法，会被忽略
+  ```
+  
+### 优点
+- 代理模式能将代理对象与真是被调用的目标对象分离
+- 一定程度上降低了系统的耦合程度，易于扩展。
+- 代理可以起到保护目标对象的作用
+- 增强目标对象的职责
+
+### 缺点
+- 代理模式会造成系统设计中累的树木增加
+- 在客户端和目标对象之间增加了一个代理对象，请求处理速度变慢。
+- 增加了系统的复杂度。
+
+### Srping中的代理选择原则
+1. 当Bean有实现接口时，Spring就会用JDK的动态代理。
+2. 当Bean没有实现接口时，Spring选择CGLib。
+3. Spring可以通过配置强制使用CGLib，只需要在Spring的配置文件中加入如下代码：
+
+```xml
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+```
