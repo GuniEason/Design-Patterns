@@ -3,9 +3,6 @@ package com.p6.pattern.decorator.loger;
 import org.slf4j.Logger;
 import org.slf4j.Marker;
 
-/**
- * Created by Tom.
- */
 public class LoggerDecorator implements Logger {
 
     protected Logger logger;

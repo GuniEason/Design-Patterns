@@ -1,5 +1,9 @@
 package com.p6.test.decorator;
 
+import com.p6.pattern.decorator.batterCake.BatterCake;
+import com.p6.pattern.decorator.batterCake.BatterCakeDecorator;
+import com.p6.pattern.decorator.batterCake.EggDecorator;
+import com.p6.pattern.decorator.batterCake.PancakeImpl;
 import com.p6.pattern.decorator.loger.JsonLogger;
 import com.p6.pattern.decorator.loger.JsonLoggerFactory;
 import org.slf4j.Logger;
@@ -12,9 +16,7 @@ public class DecoratorTest {
 
 
     public static void main(String[] args) {
-//        BatterCake cake ;
-//
-//        cake = new BatterCakeImpl();
+//        BatterCake cake = new BatterCakeImpl();
 //
 //        cake = new BatterCakeDecorator(cake);
 //
@@ -23,6 +25,16 @@ public class DecoratorTest {
 //        cake = new EggDecorator(cake);
 //
 //        System.out.println(cake.getMsg() +",总价"+ cake.getPrice());
+
+        BatterCake cake = new PancakeImpl();
+
+        cake = new BatterCakeDecorator(cake);
+
+        cake = new EggDecorator(cake);
+
+        cake = new EggDecorator(cake);
+
+        System.out.println(cake.getMsg() +",总价"+ cake.getPrice());
 
 
 //        Weapon weapon;
