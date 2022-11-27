@@ -176,7 +176,7 @@
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 ```
 
-## [门面模式](./src/test/java/com/p6/test/FacedTest.java)
+## [门面模式](./src/test/java/com/p6/test/faced/FacedTest.java)
 
 ### 定义
 

@@ -1,4 +1,4 @@
-package com.p6.test;
+package com.p6.test.faced;
 
 import com.p6.pattern.faced.FacedService;
 import com.p6.pattern.faced.GiftInfo;
