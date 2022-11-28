@@ -1,11 +1,11 @@
-package com.p6.test.bridge.message;
+package com.p6.test.bridge;
 
-import com.p6.pattern.bridge.message.AbstractMessage;
-import com.p6.pattern.bridge.message.IMessage;
-import com.p6.pattern.bridge.message.NormalMessage;
-import com.p6.pattern.bridge.message.QQMessage;
-import com.p6.pattern.bridge.message.SmsMessage;
-import com.p6.pattern.bridge.message.UrgencyMessage;
+import com.p6.pattern.bridge.AbstractMessage;
+import com.p6.pattern.bridge.IMessage;
+import com.p6.pattern.bridge.NormalMessage;
+import com.p6.pattern.bridge.QQMessage;
+import com.p6.pattern.bridge.SmsMessage;
+import com.p6.pattern.bridge.UrgencyMessage;
 
 /**
  * @project Design-Patterns

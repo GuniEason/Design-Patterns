@@ -1,4 +1,4 @@
-package com.p6.pattern.bridge.message;
+package com.p6.pattern.bridge;
 
 /**
  * @project Design-Patterns
