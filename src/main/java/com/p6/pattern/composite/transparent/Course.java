@@ -2,6 +2,7 @@ package com.p6.pattern.composite.transparent;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * @project Design-Patterns
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Course extends  BaseCourseComponent{
 
     private String name;
