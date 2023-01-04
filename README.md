@@ -317,7 +317,7 @@
 1. 适配器便携过程需要全面考虑，可能会增加系统的复杂性
 2. 增加代码阅读难度，降低代码可读性，过多使用适配器会是系统代码变得凌乱
 
-## 桥接模式
+## [桥接模式](./src/test/java/com/design/test/bridge/BridgeTest.java)
 
 ### 定义
 
@@ -457,7 +457,7 @@
 
 1. 对于比较简单的遍历（像数组或者有序列表），使用迭代器方式遍历较为繁琐。
 
-## 命令模式
+## [命令模式](./src/test/java/com/design/test/command/CommandTest.java)
 
 ### 定义
 
@@ -484,7 +484,7 @@
 1. 具体命令类可能过多
 2. 增加了程序的复杂度，理解更加困难
 
-## 备忘录模式
+## [备忘录模式](./src/test/java/com/design/test/memento/MementoTest.java)
 
 ### 定义
 
