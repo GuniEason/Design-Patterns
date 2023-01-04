@@ -4,9 +4,7 @@ import org.slf4j.Logger;
 
 import java.io.*;
 
-/**
- * Created by Tom.
- */
+
 public class Test {
 //    private static final Logger logger = LoggerFactory.getLogger(Test.class);
     private static final Logger logger = JsonLoggerFactory.getLogger(Test.class);

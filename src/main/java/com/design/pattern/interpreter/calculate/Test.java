@@ -1,8 +1,6 @@
 package com.design.pattern.interpreter.calculate;
 
-/**
- * Created by Tom.
- */
+
 public class Test {
 
     public static void main(String[] args) {

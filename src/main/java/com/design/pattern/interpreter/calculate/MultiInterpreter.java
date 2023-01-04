@@ -1,8 +1,6 @@
 package com.design.pattern.interpreter.calculate;
 
-/**
- * Created by Tom.
- */
+
 public class MultiInterpreter extends Interpreter {
 
     public MultiInterpreter(IArithmeticInterpreter left, IArithmeticInterpreter right){

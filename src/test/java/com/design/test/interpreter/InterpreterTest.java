@@ -2,9 +2,7 @@ package com.design.test.interpreter;
 
 import com.design.pattern.interpreter.calculate.GPCalculator;
 
-/**
- * Created by Tom.
- */
+
 public class InterpreterTest {
 
     public static void main(String[] args) {
