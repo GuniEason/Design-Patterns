@@ -4,7 +4,7 @@
 ## 工厂模式
 
 
-### [简单工厂](./src/main/java/com/p6/pattern/factory/SimpleFactory.java)
+### [简单工厂](src/main/java/com/design/pattern/factory/SimpleFactory.java)
 
 #### 定义
 > 简单工厂是指由一个工厂对象决定创建出哪一种产品类的实例
@@ -16,7 +16,7 @@
 - 工厂类的职责相对过重，增加新的产品时需要修改工厂类的判断逻辑，违背开闭原则
 - 不易于扩展过于复杂的产品结构。
 
-### [工厂方法模式](./src/main/java/com/p6/pattern/factory/methodfactory/MethodFactoryTest.java)
+### [工厂方法模式](src/main/java/com/design/pattern/factory/methodfactory/MethodFactoryTest.java)
 
 #### 定义
 > 工厂方法模式是指定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类，工厂方法让类的实例化推迟到子类中进行。
@@ -71,22 +71,22 @@
 1. 私有化构造器
 2. 保证线程安全
 3. 延迟加载
-4. [防止序列化和反序列化破坏单例](./src/test/java/com/p6/test/singleton/SerializableTest.java)
-5. [防御反射攻击单例](./src/test/java/com/p6/test/singleton/ReflectTest.java)
+4. [防止序列化和反序列化破坏单例](./src/test/java/com/design/test/singleton/SerializableTest.java)
+5. [防御反射攻击单例](./src/test/java/com/design/test/singleton/ReflectTest.java)
 
 
 ### 写法
 
-- [饿汉式单例](./src/main/java/com/p6/pattern/singleton/hungry/HungrySingleton.java)
-- [饿汉式单例static代码块写法](./src/main/java/com/p6/pattern/singleton/hungry/HungryStaticSingleton.java)
-- [懒汉式单例](./src/main/java/com/p6/pattern/singleton/lazy/LazySimpleSingleton.java)
-- [懒汉式双重检查锁](./src/main/java/com/p6/pattern/singleton/lazy/LazyDoubleCheckSingleton.java)
-- [懒汉式静态代码块单例](./src/main/java/com/p6/pattern/singleton/lazy/LazyStaticInnerClassSingleton.java)
-- [注册式单例（容器式）](./src/main/java/com/p6/pattern/singleton/register/ContainerSingleton.java)
-- [枚举式单例](./src/main/java/com/p6/pattern/singleton/register/EnumSingleton.java)
-- [threadLocal单例](./src/main/java/com/p6/pattern/singleton/threadLocal/ThreadLocalSingleton.java)
+- [饿汉式单例](src/main/java/com/design/pattern/singleton/hungry/HungrySingleton.java)
+- [饿汉式单例static代码块写法](src/main/java/com/design/pattern/singleton/hungry/HungryStaticSingleton.java)
+- [懒汉式单例](src/main/java/com/design/pattern/singleton/lazy/LazySimpleSingleton.java)
+- [懒汉式双重检查锁](src/main/java/com/design/pattern/singleton/lazy/LazyDoubleCheckSingleton.java)
+- [懒汉式静态代码块单例](src/main/java/com/design/pattern/singleton/lazy/LazyStaticInnerClassSingleton.java)
+- [注册式单例（容器式）](src/main/java/com/design/pattern/singleton/register/ContainerSingleton.java)
+- [枚举式单例](src/main/java/com/design/pattern/singleton/register/EnumSingleton.java)
+- [threadLocal单例](src/main/java/com/design/pattern/singleton/threadLocal/ThreadLocalSingleton.java)
 
-## [原型模式](./src/test/java/com/p6/test/prototype/PrototypeTest.java)
+## [原型模式](./src/test/java/com/design/test/prototype/PrototypeTest.java)
 
 > - 是指原型实例制定创建对象的种类，并且通过拷贝这些原型创建新的对象
 > - 调用者不需要知道任何创建细节，不调用构造函数
@@ -105,7 +105,7 @@
 - 对克隆复杂对象或对克隆出的对象惊醒复杂改造时，易带来风险。
 - 深拷贝、浅拷贝要运用得当
 
-## [建造者模式](./src/main/java/com/p6/pattern/builder/chain/ChainBuilder.java)
+## [建造者模式](src/main/java/com/design/pattern/builder/chain/ChainBuilder.java)
 
 ### 适用场景
 
@@ -143,10 +143,11 @@
 4. 手写实现定义的动态代理
 
 ### 模式
-- [静态代理(显式声明被代理对象)](./src/main/java/com/p6/pattern/proxy/statics/TeachProxy.java)
+
+- [静态代理(显式声明被代理对象)](src/main/java/com/design/pattern/proxy/statics/TeachProxy.java)
 - 动态代理(动态配置和替换被代理对象)
-  - [JDK代理(采用实现的方式，必须要求代理的目标对象实现一个接口)](./src/main/java/com/p6/pattern/proxy/jdk/TeacherJdkProxy.java)
-  - [CG Lib代理(采用继承、覆盖父类的方法)](./src/main/java/com/p6/pattern/proxy/cglib/CglibProxy.java)
+  - [JDK代理(采用实现的方式，必须要求代理的目标对象实现一个接口)](src/main/java/com/design/pattern/proxy/jdk/TeacherJdkProxy.java)
+  - [CG Lib代理(采用继承、覆盖父类的方法)](src/main/java/com/design/pattern/proxy/cglib/CglibProxy.java)
   > 思想：都是通过生成字节码，重组成一个新的类
   ```markdown
    - JDK Proxy 对于用户而言，依赖更强，调用也更复杂
@@ -176,7 +177,7 @@
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 ```
 
-## [门面模式](./src/test/java/com/p6/test/faced/FacedTest.java)
+## [门面模式](./src/test/java/com/design/test/faced/FacedTest.java)
 
 ### 定义
 
@@ -207,8 +208,7 @@
 - 门面模式重点在于封装
 - 代理模式重点在于增强
 
-
-## [装饰器模式](./src/test/java/com/p6/test/decorator/DecoratorTest.java)
+## [装饰器模式](./src/test/java/com/design/test/decorator/DecoratorTest.java)
 
 ### 定义
 
@@ -238,7 +238,7 @@
 3. （ConCreateComponent）抽象装饰器：通用的装饰器，其内部必然又一个属性只想抽象组建，其实现一般时一个抽象类，主要时为了让其子类按照其构造形式传入一个抽象组件，这是一个强制的通用行为。
 4. 具体装饰器（ConCreateDecorator）：装饰器的具体实现类，理论上每个ConcreateDecorator都扩展了Component对象的一种功能。
 
-## [享元模式](./src/test/java/com/p6/test/flyweight/FlyWeightTest.java)
+## [享元模式](./src/test/java/com/design/test/flyweight/FlyWeightTest.java)
 
 ### 定义
 
@@ -286,8 +286,8 @@
 
 ### 写法
 
-- [透明模式](./src/test/java/com/p6/test/composite/transparent/TransparentTest.java)
-- [安全模式](./src/test/java/com/p6/test/composite/safe/SafeTest.java)
+- [透明模式](./src/test/java/com/design/test/composite/transparent/TransparentTest.java)
+- [安全模式](./src/test/java/com/design/test/composite/safe/SafeTest.java)
 
 ## 适配器模式
 
@@ -302,9 +302,9 @@
 
 ### 写法
 
-- [类适配器](./src/test/java/com/p6/test/general/classadapter/ClassAdapter.java)
-- [接口适配器](./src/test/java/com/p6/test/general/integerfaceadapter/InterfaceTest.java)
-- [对象适配器](./src/test/java/com/p6/test/general/objectadapter/ObjectTest.java)
+- [类适配器](./src/test/java/com/design/test/general/classadapter/ClassAdapter.java)
+- [接口适配器](./src/test/java/com/design/test/general/integerfaceadapter/InterfaceTest.java)
+- [对象适配器](./src/test/java/com/design/test/general/objectadapter/ObjectTest.java)
 
 ### 优点
 
@@ -342,7 +342,7 @@
 1. 增加了系统的理解与设计难度
 2. 需要正确地识别系统中两个独立变化的纬度
 
-## [策略模式](./src/test/java/com/p6/test/strategy/StrategyTest.java)
+## [策略模式](./src/test/java/com/design/test/strategy/StrategyTest.java)
 
 ### 定义
 
@@ -366,7 +366,7 @@
 1. 客户端必须知道所有的策略，并且自行决定使用哪一个策略类。
 2. 代码中会产生非常多策略类，增加维护难度。
 
-## [责任链模式](./src/test/java/com/p6/test/chain/ChainTest.java)
+## [责任链模式](./src/test/java/com/design/test/chain/ChainTest.java)
 
 ### 定义
 
@@ -391,7 +391,7 @@
 1. 责任链太长或者处理时间过长，会影响整体性能。
 2. 如果节点对象存在循环引用时，会造成死循环，导致系统崩溃。
 
-## [迭代器模式](./src/test/java/com/p6/test/iterator/IteratorTest.java)
+## [迭代器模式](./src/test/java/com/design/test/iterator/IteratorTest.java)
 
 ### 定义
 
@@ -464,7 +464,7 @@
 
 1. 消耗资源：如果需要保存的状态过多时，每一次保存都会消耗很多内存。
 
-## [状态模式](./src/test/java/com/p6/test/state/StateTest.java)
+## [状态模式](./src/test/java/com/design/test/state/StateTest.java)
 
 ### 定义
 
@@ -487,7 +487,7 @@
 2. 状态模式的结构与实现都较为复杂，如果使用不当将导致程序结构和代码的混乱。
 3. 状态模式对开闭原则的支持并不友好，对于可以切换状态的状态模式，增加新的状态类需要修改哪些负责状态转换的源代码，否则无法切换到新增状态，而且修改某个状态类的行为也需修改对应类的源代码。
 
-## [中介者模式](./src/test/java/com/p6/test/mediator/MediatorTest.java)
+## [中介者模式](./src/test/java/com/design/test/mediator/MediatorTest.java)
 
 ### 定义
 
@@ -509,7 +509,7 @@
 
 1. 中介者模式中将原本多个对象直接的相互依赖变成了中介者和多个同事类的依赖关系。当同事类越多时，中介者就会越臃肿，变得复杂且难以维护。
 
-## [解释器模式](./src/test/java/com/p6/test/interpreter/InterpreterTest.java)
+## [解释器模式](./src/test/java/com/design/test/interpreter/InterpreterTest.java)
 
 ### 定义
 
@@ -533,7 +533,7 @@
 1. 语法规则比较复杂时，会引起类膨胀；
 2. 执行效率比较低。
 
-## [访问者模式](./src/test/java/com/p6/test/visitor/VisitorTest.java)
+## [访问者模式](./src/test/java/com/design/test/visitor/VisitorTest.java)
 
 ### 定义
 
@@ -560,7 +560,7 @@
 2. 具体元素变更困难：具体元素增加属性，删除属性等操作会导致对应的访问者类需要进行相应的修改，尤其当有大量访问者类时，修改范围太大；
 3. 违背依赖导致原则：为了达到"区别对待"，访问者依赖的是具体元素类型，而不是抽象。
 
-## 观察者模式
+## [观察者模式](./src/test/java/com/design/test/observer/general/Test.java)
 
 ### 定义
 
@@ -572,3 +572,15 @@
 2. 其他一个或多个对象的变化依赖于另一个对象的变化；
 3. 实现蕾丝广播机制的功能，无需知道具体收听者，只需分发广播，系统中感兴趣的对象会自动接收该广播。
 4. 多层级嵌套使用，形成一种链式触发机制，使得事件具备跨域（跨越两种观察者类型通知）。
+
+### 优点
+
+1. 观察者和被观察者是松耦合（抽象耦合）的，符合依赖倒置原则。
+2. 分离了表示层（观察者）和数据逻辑层（被观察者），并且建立了一套触发机制，使得数据的变化可以响应到多个表示层上。
+3. 实现了一对多的通讯机制，支持时间注册机制，支持兴趣分发机制，当被观察者触发事件时，只有感兴趣的观察者可以接收到通知。
+
+### 缺点
+
+1. 如果观察者数量过多，则时间通知会耗时较长。
+2. 时间通知成线性关系，如果其中一个观察者处理时间卡壳，会影响后续的观察者接收该事件。
+3. 如果观察者和被观察者之间存在循环依赖，则可能造成两者之间的循环调用，导致系统崩溃。
