@@ -1,4 +1,4 @@
-package state;
+package com.p6.test.state;
 
 import com.p6.pattern.state.AppContext;
 
